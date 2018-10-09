@@ -1,0 +1,64 @@
+{%extends "base.html" %}
+{%block title %}Devices{% endblock %}
+
+
+ 
+{%block head %}<h1>Result</h1>{% endblock %} 
+
+
+{%block content %}
+<link rel="stylesheet" href="/static/D_style.css" type="text/css"/>
+ <div id="hi"> <div id="switch"> <a href="/macsandips">ALL static devices</a></div>
+
+  <div id="switch"> <h2>Your Netduinos</h2>
+{% if d_list %}
+    
+    
+      <ul>
+      {% for d in d_list %}
+<div id="switch2"> 
+         <li><a href="/netduino/{{d.id}}">Name : netduinoname{{ d.d_name   }}</a></li><ul><li>IP &nbsp&nbsp&nbsp&nbsp: {{ d.network_addr  }}</li> </ul></li>
+          <li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{d.id}}"/>
+  <input class="hey" type="submit" name="remnetduino"   value="Delete"/>
+
+</form></li>
+</div>
+      {% endfor %}
+    </ul>
+
+{% else %}
+   <div id="switch2"> <h4>No Devices Found.</h4>
+{% endif %}
+</div></div>
+<div id="switch">
+<h2>Shared Netduino</h2>
+{% if df_list %}
+  
+     <ul>
+      {% for d in df_list %}  <div id="switch2">
+       <li><a href="/netduino/{{d.id}}">Name : netduinoname{{ d.d_name   }}</a></li><ul><li>IP &nbsp&nbsp&nbsp&nbsp: {{ d.network_addr }}</li> </ul></li>
+     </div> {% endfor %}
+    </ul>
+
+{% else %}
+   <div id="switch2"> <h4>You have Not shared any Netduino Yet</h4>
+{% endif %}
+</div></div>
+
+<div id="switch">
+<h2>Friends Netduino</h2>
+{% if f_list %}
+    
+     <ul>
+      {% for d in f_list%}
+    <div id="switch2">  <li><a href="/netduino/{{d.id}}">netduinoname{{ d.d_name   }}</a></li><ul><li>{{ d.network_addr  }}</li> </ul></li>
+      </div>{% endfor %}
+    </ul>
+
+{% else %}
+   <div id="switch2"> <h4>No Netduino Share With You</h4>
+{% endif %}
+</div></div></div>
+{% endblock %}
+

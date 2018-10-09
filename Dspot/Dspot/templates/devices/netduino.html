@@ -1,0 +1,146 @@
+{%extends "base.html" %}
+{%block title %}Share your Device{% endblock %}
+
+
+
+ 
+{%block head %}<h1>Netduino</h1>{% endblock %} 
+
+
+{%block content %}
+<link rel="stylesheet" href="/static/D_style.css" type="text/css"/>
+<div id="switch"> 
+    <div id="switch2"><h4>Device Name : {{ip.d_name}}</h4>
+<h4>User&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: {{N_user.first_name }} {{N_user.last_name}}{{N_user.username}}</h4>
+      <h4>Ip Address &nbsp&nbsp&nbsp: {{ip.ip}}</h4>
+       <h4>Port &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: {{ip.port}}</h4>
+{%if mynetduino%}
+<a href="/editnetduino/{{d_id}}">Edit</a></div> </div> 
+
+
+<div id="switch">
+<h2>Yours Switches</h2>
+ {%if myswitches%}  <div id="switch2">
+<form action="." method="post">{% csrf_token %}
+  
+ 
+ <input class="hey" type="submit" name ="sw2" value="All On"/>  
+<input class="hey" type="submit" name ="sw2" value="All Off"/>
+<input class="hey" type="submit" name="sw2"  value="Refresh All"/>
+
+
+</form> 
+ 
+ <ul></div>
+ 
+ 
+{%endif%}
+    </div>
+
+	<div id="switch"> {% for s in myswitches %}
+        <div id="switch2"> <li><a href="/{{s.d_type}}/{{s.id}}">{{s.d_name}}</a>
+{%if s.shared%} <li> Shared</li>{%endif%}
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="sw1"   value="{{s.id}}"/>
+  Status :{{ s.status|yesno:"On,Off,None" }}
+  Output Pin :{{s.d_pin}}
+<a href="/share/swman/{{s.id}}/">Share/Unshare</a>
+{%if s.status%}
+ <input class="hey" type="submit" name ="sw2" value="Off"/>
+ {%else%}
+<input class="hey" type="submit" name ="sw2" value="On"/>
+{%endif%}
+<input class="hey" type="submit" name="sw2"  value="Refresh"/>
+
+
+
+</form></li>
+</ul></li>
+
+
+
+
+     </div> {% endfor %}
+    </ul></div>
+
+ 
+<div id="switch">
+<h2>Wareabout</h2>
+<div id="switch2"><ul>
+     
+       <li><a href="/wareabout/{{mywareabout.id}}/{{d_id}}/">whereabout{{ d.d_name   }}</a></li><ul><li>{{ mywareabout.d_name  }}</li> </ul></li>
+     {%if mywareabout.shared%} <li> shared</li>{%endif%}
+    </ul>
+	</div></div>
+	<div id="switch">
+<h2>Bell</h2>
+<div id="switch2"><ul>
+     
+       <li><a href="/bell/{{mybell.id}}">{{ mybell.d_name   }}</a></li>
+     
+    </ul>
+  
+</div></div>
+{% else %}
+
+
+    <h2>Features Shared with u</h2>
+	
+	
+	
+<h2>Switches</h2>
+     <ul>
+  {%if hisswitches%} 
+<form action="." method="post">{% csrf_token %}
+  
+
+ <input class="hey" type="submit" name ="sw2" value="All On"/>  
+<input class="hey" type="submit" name ="sw2" value="All Off"/>
+<input class="hey" type="submit" name="sw2"  value="Refresh All"/>
+
+
+</form>
+ <ul>
+{%endif%}
+        {% for s in hisswitches %}
+         <li><a href="/{{s.d_type}}/{{s.id}}">{{s.d_name}}</a>
+{%if s.shared%} <li> Shared</li>{%endif%}
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="sw1"   value="{{s.id}}"/>
+  Status :{{ s.status|yesno:"On,Off,None" }}
+  Output Pin :{{s.d_pin}}
+
+{%if s.status%}
+ <input class="hey" type="submit" name ="sw2" value="Off"/>
+ {%else%}
+<input class="hey" type="submit" name ="sw2" value="On"/>
+{%endif%}
+<input class="hey" type="submit" name="sw2"  value="Refresh"/>
+
+
+
+</form></li>
+</ul></li>
+
+ 
+      {% endfor %}
+    </ul>
+ 
+
+
+
+<h2>Wareabout</h2>
+<ul>
+     
+       <li><a href="/wareabout/{{hiswareabout.id}}/{{d_id}}">whereabout{{ hiswareabout.d_name   }}</a></li><ul><li>{{ hiswareabout.d_name  }}</li> </ul></li>
+     {%if s.shared%} <li> shared</li>{%endif%}
+    </ul>
+
+</div></div>
+{% endif %}
+
+
+
+
+{% endblock %}
+

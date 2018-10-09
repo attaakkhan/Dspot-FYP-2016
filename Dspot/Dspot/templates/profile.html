@@ -1,0 +1,42 @@
+
+{%extends "base.html" %}
+{%block title %}Profile{% endblock %}
+
+
+ 
+
+{%block head %}<h1>Result</h1>{% endblock %}
+{%block content %}
+<link rel="stylesheet" href="/static/P_style.css" type="text/css"/>
+<div id="here"><div id="switch2">
+    <h4>First Name : {{uf_name}}</h4>
+      <h4>Last Name : {{ul_name}}</h4>
+ <h4>Emaial   &nbsp &nbsp&nbsp&nbsp&nbsp : {{u_email}}</h4>
+</div></div>
+<div id="here"><div id="switch2">
+ {%if share_with_you%}
+     <ul>
+      {% for d in share_with_you %}
+         <li>{{ d.d_name }}</li>
+<li>{{ d.d_type }}</li>
+      {% endfor %}
+    </ul></div></div>
+<div id="here1"> <div id="switch2">
+{% else %}
+    <p>No Devices Shares with you.</p>
+{% endif %}
+</div></div>
+
+<div id="lun">
+<form action="." method="post">{% csrf_token %}
+   
+ 
+  <input type="{{a_button}}" name ="f_request2" value="Decline"/>
+  <input class="hey" type="submit" name="f_request1"  value="{{f_button}}">
+
+</form>
+</div>
+
+{% endblock %}
+
+ 

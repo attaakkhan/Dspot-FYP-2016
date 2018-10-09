@@ -1,0 +1,38 @@
+#login{
+	
+	 
+	font-weight: bold;
+	padding:15px;
+	 text-align:left;
+    background-color: #f8c445;
+	 margin:20px 120px 20px 120px;
+	 
+     float:left;
+	 
+	
+} 
+
+#login1{
+	
+	 
+	font-weight: bold;
+	padding:15px;
+	 text-align:right;
+    background-color: #f8c445;
+	 margin:20px 120px 20px 120px;
+	 
+     float:left;
+	 
+	
+} 
+.hey{
+	
+	text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	background-color:#000000;
+	color:#f9b410;
+	border: none;
+}

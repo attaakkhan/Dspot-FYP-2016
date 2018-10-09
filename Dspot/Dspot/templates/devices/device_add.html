@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+ 
+ 
+  
+{% block head %}<h2>User Registration</h2>{% endblock %} 
+
+
+{% block content %}
+<link rel="stylesheet" href=" /static/D_style.css" type="text/css"/>
+
+<div id="switch">
+<div id="switch2">
+<h3><a href="/addmac">Add Mac</a></h3>
+<h3><a href="/addnet">Add Ip</a></h3>
+<h3><a href="/addswman">Add Manual Switch</a></h3>
+<h3><a href="/addbell">Add Door Bell</a></h3>
+<h3><a href="/addwareabout">Add Wareabout</a></h3>
+<h3><a href="/addnetduino">Add Netduino</a></h3>
+
+  <form action="." method="post">{% csrf_token %}
+
+<p>{{status}}</p>
+{{ form.as_p }}
+<input class="hey" type="submit"  value="Register"  />
+</form></div></div>
+{% endblock %}

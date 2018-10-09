@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}User Registration{% endblock %}
+
+
+<div id="switch1"> 
+{% block head %}<h1>User Registration</h1>{% endblock %}</div>
+
+{% block content %}
+<link rel="stylesheet" href=" /static/D_style.css" type="text/css"/>
+<div id="switch"> 
+<div id="switch2"> 
+<a href="/addmac"><h4>Add Mac</h4></a>
+<a href="/addnet"><h4>Add Ip</h4></a>
+<a href="/addswman"><h4>Add Manual Switch</h4></a>
+<a href="/addbell"><h4>Add Door Bell</h4></a>
+<a href="/addwareabout"><h4>Add Wareabout</h4></a>
+<a href="/addnetduino"><h4>Add Netduino</h4></a></div></div>
+
+<div id="switch"> 
+{%if status%}
+<h2>{{status}}</h2>
+{% endif %}
+</div>
+
+<div id="switch"> <div id="switch2">
+{%if this%}
+  <form action="." method="post">{% csrf_token %}
+
+
+
+{{ form.as_p }}
+
+<input class="hey" type="submit" value="Create" />
+
+</form>
+<form action="." method="post">{% csrf_token %}
+     <input class="hey" type="submit" name="fromip"   value="Update From Ip"/>
+
+</form>
+{%else%}
+
+
+{%if nets%}
+</div>
+<h2>Your IP's</h2>
+     <div id="switch2"> <ul>
+      {% for net in nets%}
+         <li>{{net.name}}<ul><li>{{net.ip }} </li>
+<li>{{net.port }} </li>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="select1"   value="{{net.id}}"/>
+  <input class="hey" type="submit" name="select2"   value="Select"/>
+
+</form></li>
+<a href="/editnet/{{net.id}}">Edit</a>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+    <p>Add ips please</p>
+{% endif %}
+
+{% endif %}
+</div></div>
+{% endblock %}

@@ -1,0 +1,24 @@
+
+{%extends "base.html" %}
+{%block title %}{{ username }}{% endblock %}
+
+ 
+  
+{%block head %}<h1>Bookmarks for {{ username }}</h1>{% endblock %}
+ 
+
+{%block content %}
+ <link rel="stylesheet" href="/static/U_style.css" type="text/css"/>
+<div id="user">{% if bookmarks %}
+
+<div id="switch2"><ul>
+{% for bookmark in bookmarks %}
+<li><a href="{{ bookmark.link.url }}">
+<h2>{{ bookmark.title }}</a></h2></li>
+{% endfor %}
+</ul>
+{% else %}
+</h4>No bookmarks found.</h4>
+{% endif %}<br>
+</div></div>
+{% endblock %}

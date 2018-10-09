@@ -1,0 +1,88 @@
+{%extends "base.html" %}
+{%block title %}Switch{% endblock %}
+
+
+ 
+{%block head %}<h1>Result</h1>{% endblock %}
+ 
+ 
+{%block content %}
+<link rel="stylesheet" href="/static/D_style.css" type="text/css"/>
+ <div id="switch"><div id="switch2">
+    <p>Device Name : {{d.d_name}}</p>
+      <p>Ip Address &nbsp&nbsp&nbsp&nbsp: {{d.ip}}</p>
+       <p>Port &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : {{d.port}}</p>
+ <p>User &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : {{user.first_name}} {{user.last_name}}</p>
+  <p>Status  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : {{status}}</p>
+{%if bt_a%}</div>
+<h2>Bluetooth Address</h2>
+     <div id="switch2"> <ul>
+      {% for bt in bt_a %}
+         <li>{{bt.name}}<ul><li>{{bt.mac_addr }} </li>
+<li>{{bt.code }} </li>
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{bt.id}}"/>
+  <input class="hey" type="submit" name="Remove2"   value="Remove Mac"/>
+
+</form></li>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+    <p>No macs</p>
+{% endif %}
+{%if net_a%}
+</div>
+<h2>Your IP's</h2>
+      <div id="switch2"><ul>
+      {% for net in net_a %}
+         <li>{{net.name}}<ul><li>{{net.ip }} </li>
+<li>{{net.port }} </li>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{net.id}}"/>
+  <input class="hey" type="submit" name="Remove2"   value="Remove IP"/>
+
+</form></li>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+    <p>no ips</p>
+{% endif %}
+</div></div>
+<div id="switch">
+{%if users%}
+<h2>Shares with</h2>
+     <div id="switch2"><ul>
+      {% for f in users %}
+         <li><a href="/profile/{{f.username}}">{{f.username}}</a><ul><li>{{ f.first_name }} {{f.last_name}}</li>
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{f.username}}"/>
+  <input class="hey" type="submit" name="Remove2"   value="Remove User"/>
+
+</form></li>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+</div></div>
+<div id="switch">
+    <h2>Not Shared</h2><div id="switch2">
+{% endif %}
+
+<form action="." method="post">{% csrf_token %}
+  {%if status%}
+  <input class="hey" type="submit" name ="f_request" value="ON"/>
+{%else%}  
+<input class="hey" type="submit" name ="f_request" value="OFF"/>
+{%endif%}
+  <input class="hey" type="submit" name="f_request"  value="Status"/>
+
+</form>
+
+</div></div>
+{% endblock %}
+

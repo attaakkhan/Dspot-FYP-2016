@@ -1,0 +1,50 @@
+#friend{
+
+      
+	font-weight: bold;
+	padding:9px;
+	text-align:left;
+     float:right;
+	width:550px;
+
+}
+
+ #you{
+
+      
+	font-weight: bold;
+	padding:9px;
+	text-align:left;
+
+
+}
+
+#hello{
+	
+	 text-align:left;
+     float:right;
+	 
+	background-color: #f8c445;
+	 font-weight: bold;
+	padding:9px;
+	 
+
+	margin:20px 120px 20px 120px;
+}
+
+#friend1{
+
+      
+	font-weight: bold;
+	padding:9px;
+	text-align:left;
+
+
+}
+#switch2{
+	text-align:left;
+	background-color: f9b410;
+	margin:20px 80px 20px 80px;
+	padding:9px;
+	
+}

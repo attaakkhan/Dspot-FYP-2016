@@ -1,0 +1,61 @@
+
+{%extends "base.html" %}
+{%block title %}Share your Device{% endblock %}
+
+  
+  
+  
+{%block head %}<h1>Friends{% endblock %}</h1> 
+
+
+{%block content %}
+<link rel="stylesheet" href=" /static/D_style.css" type="text/css"/>
+<div id="switch"><div id="switch2">
+    <p>Device Name : {{d.d_name}}</p>
+<p>User: {{user.first_name }}{{u.last_name}}</p>
+     
+     
+       <p>Port &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: {{d.pin}}</p></div></div>
+
+	   
+	   <div id="device1"><h1>Share With Friends</h1></div>
+{%if users_new%}
+<div id="switch">
+ <h2>Friends</h2> 
+     
+	 <ul>
+      {% for f in users_new %}
+       <div id="switch2">  <li><a href="/profile/{{f.username}}">{{f.username}}</a><ul><li>{{ f.first_name }} {{f.last_name}}</li>
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="share1"   value="{{f.username}}"/>
+  <input class="hey" type="submit" name="share2"   value="share"/>
+
+</form></li>
+</ul></li></div>
+      {% endfor %}
+    </ul>
+{% else %}<div id="switch2">
+    <p>Not Friends</p>
+{% endif %}</div></div>
+<div id="switch">
+{%if users%}
+<div id="device1"><h2>Currently Sharing with</h2></div>
+     <ul>
+      {% for f in users %}
+        <div id="switch2"> <li><a href="/profile/{{f.username}}">{{f.username}}</a><ul><li>{{ f.first_name }} {{f.last_name}}</li>
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="share1"   value="{{f.username}}"/>
+  <input class="hey" type="submit" name="share2"   value="unshare"/>
+
+</form></li>
+</ul></li></div>
+      {% endfor %}
+    </ul>
+{% else %}
+   <div id="switch2"> <h3>Not Shared</h3></div>
+{% endif %}
+
+</div>
+
+{% endblock %}
+

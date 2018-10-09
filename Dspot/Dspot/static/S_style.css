@@ -1,0 +1,41 @@
+#switch{
+	
+	 
+	font-weight: bold;
+	padding:9px;
+	 text-align:center;
+    background-color: #f8c445;
+	 margin:20px 120px 20px 120px;
+	 
+     float:right;
+	 
+	
+}
+
+#switch1{
+	text-align:center;
+}
+
+#switch2{
+	text-align:left;
+	background-color: f9b410;
+	margin:20px 80px 20px 80px;
+	padding:9px;
+	
+}
+
+a:link,a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+a:hover,a:active{
+	color:#797979;
+	text-decoration: none;
+}
+
+ ul
+{
+list-style-type: none;
+}
+

@@ -1,0 +1,11 @@
+
+{%extends "main_page.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/R_style.css" type="text/css"/>
+<div id="login1">
+<form method="post" action="."  >{% csrf_token %}
+{{ form.as_p }}
+<input class="hey" type="submit" value="register" />
+</form></div>
+{% endblock %}

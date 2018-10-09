@@ -1,0 +1,45 @@
+{%extends "base.html" %}
+{%block title %}Switch{% endblock %}
+
+
+ <div id="switch1">
+{%block head %}<h1>Result</h1>{% endblock %}</div>
+
+
+{%block content %}
+<link rel="stylesheet" href="/static/D_style.css" type="text/css"/>
+<div id="switch"><div id="switch2">
+<h4>Device Name : {{netduin.d_name}}</h4>
+      
+       
+ <h4>User &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : {{user1.first_name}} {{user1.last_name}}</h4>
+    
+{%if macs%}</div>
+<h2>Bluetooth Addresess</h2>
+     <div id="switch2"><ul>
+      {% for mac in macs %}
+         <li>Name {{mac.name}}<ul>
+<li>{{mac.status }} </li>
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="check1"   value="{{mac.id}}"/>
+  <input class="hey" type="submit" name="check2"   value="Check"/>
+  
+
+</form></li>
+
+</ul></li>
+
+      {% endfor %}
+<a href="/editwareabout/{{d.id}}">Edit</a>
+    </ul>
+<form action="." method="post">{% csrf_token %}
+  <input class="hey" type="submit" name="check2"   value="Check All"/>
+ </form></li>
+{% else %}
+    <h2>No Macs</h2>
+{% endif %}
+
+</div></div>
+{% endblock %}
+

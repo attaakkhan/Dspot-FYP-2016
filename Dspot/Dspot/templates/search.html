@@ -1,0 +1,38 @@
+{%extends "base.html" %}
+{%block title %}Searh Result{% endblock %}
+ 
+
+  
+{%block head %}<h1>Result</h1>{% endblock %}
+ 
+
+{%block content %}
+ <link rel="stylesheet" href="/static/S_style.css" type="text/css"/>
+<div id="switch"> {% if d_list %}
+    <h2>Your Devices</h2>
+     <div id="switch2"><ul>
+      {% for d in d_list %}
+         <li>{{ d.d_name }}</li>
+<li>{{ d.d_type }}</li>
+      {% endfor %}
+    </ul>
+
+{% else %}
+    <h2>No Devices Found.</h2>
+{% endif %}
+</div></div>
+<div id="switch"> 
+{% if f_list %}
+    <h2>People</h2>
+   <div id="switch2">  <ul>
+      {% for f in f_list %}
+         <li><a href="/profile/{{f.username}}">{{f.username}}</a><ul><li>{{ f.first_name }} {{f.last_name}}</li></ul></li>
+      {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No People Found.</p>
+{% endif %}
+</div></div>
+{% endblock %}
+

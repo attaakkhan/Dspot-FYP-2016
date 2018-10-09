@@ -1,0 +1,111 @@
+body{
+	
+	color:#000305;
+	font-size:80%;
+	font-family:'Lucida Sans Unicode';
+    line-height:1.5;
+    text-align:left;	
+	padding:20px;
+	 
+	
+}
+a{
+	text-decoration:none;
+}
+
+
+
+.body{
+	
+	margin:0 auto;
+	 
+	clear:both;
+	
+}
+#slider{
+	
+	 background-color:#FFA500;
+	
+}
+
+#about{text-align:center;
+         font-weight: bold;
+		 font-size:25px;
+		 
+}
+
+#left1{
+	font-style: oblique;
+	font-style: italic;
+	font-weight: bold;
+	font-family: "Times New Roman", Georgia, Serif;
+	background-color:#FFDB58;
+	 
+}
+
+
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+	width:99.5%;
+   padding:35px;
+ 
+   
+    
+	 
+}
+#head{
+	
+	background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+	 padding:8px;	 
+   
+ 
+}
+
+.mainhead nav {
+	 background-color:#000000;
+	 height:30px;
+	
+	 
+	
+	 
+}
+
+.mainhead nav ul{
+	
+	list-style:none;
+	margin:0 auto;
+	
+	
+}
+
+.mainhead nav ul li {
+	
+	float:right;
+	display:inline;
+	
+}
+.mainhead nav a:link, .mainhead nav a:visited{
+	
+	color:#FFFFFF;
+	display:inline-block;
+	padding:5px 10px;
+	height:20px;
+	  
+}
+.mainhead nav .active a:link,
+.mainhead nav .active a:visited,
+.mainhead nav  a:hover,
+.mainhead nav a:active{
+	background-color:#FFA500;
+	text-shadow:none;
+	 
+}
+
+ 

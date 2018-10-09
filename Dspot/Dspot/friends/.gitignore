@@ -1,0 +1,7 @@
+/__init__.pyc
+/admin.pyc
+/app_settings.pyc
+/management.pyc
+/models.pyc
+/signals.pyc
+/views.pyc

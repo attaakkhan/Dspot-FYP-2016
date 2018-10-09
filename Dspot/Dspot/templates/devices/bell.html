@@ -1,0 +1,98 @@
+
+{%extends "base.html" %}
+{%block title %}Switch{% endblock %}
+
+
+
+ 
+{%block head %}<h1>Result</h1>{% endblock %} 
+
+{%block content %}
+<link rel="stylesheet" href="/static/D_style.css" type="text/css"/>
+
+<div id="switch">
+
+<div id="switch2">
+    <h4>Device Name : {{d.d_name}}</h4>
+      <h4>Ip Address : {{d.ip}}</h4>
+       <h4>Port : {{d.port}}</h4>
+ <h4>User : {{user.first_name}} {{user.last_name}}</h4>
+
+  <h4>Status : {{status}}</h4>
+
+<a href="/editbell/{{d.id}}">Edit</a>
+{%if bt_a%}</div>
+<h2>Bluetooth Address</h2>
+     <div id="switch2"><ul>
+      {% for bt in bt_a %}
+         <li>{{bt.name}}<ul><li>{{bt.mac_addr }} </li>
+<li>{{bt.code }} </li>
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{bt.id}}"/>
+  <input type="submit" name="Remove2"   value="Remove Mac"/>
+
+</form></li>
+<a href="/editmac/{{bt.id}}">Edit</a>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+    <p>no macs</p>
+{% endif %}
+</div></div>
+<div id="switch">
+{%if net_a%}
+
+<h2>Your IP's</h2>
+     <div id="switch2"><ul>
+      {% for net in net_a %}
+         <li>{{net.name}}<ul><li>{{net.ip }} </li>
+<li>{{net.port }} </li>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{net.id}}"/>
+  <input type="submit" name="Remove2"   value="Remove IP"/>
+
+</form></li>
+<a href="/editnet/{{net.id}}">Edit</a>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %}
+    <h4>NO IPs</h4>
+{% endif %}</div></div>
+{%if users%}
+
+<div id="switch">
+<h2>Shares with</h2>
+     <div id="switch2"><ul>
+      {% for f in users %}
+         <li><a href="/profile/{{f.username}}">{{f.username}}</a><ul><li>{{ f.first_name }} {{f.last_name}}</li>
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="Remove1"   value="{{f.username}}"/>
+  <input type="submit" name="Remove2"   value="Remove User"/>
+
+</form></li>
+</ul></li>
+      {% endfor %}
+    </ul>
+{% else %} </div></div>
+<div id="switch">
+    <h2>Not Shared</h2>
+ <div id="switch2">{% endif %}
+
+<form action="." method="post">{% csrf_token %}
+  {%if status%}
+  <input type="submit" name ="f_request" value="ON"/>
+{%else%}  
+<input type="submit" name ="f_request" value="OFF"/>
+{%endif%}
+  <input type="submit" name="f_request"  value="Status"/>
+
+</form>
+
+</div></div>
+{% endblock %}
+

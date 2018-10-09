@@ -1,0 +1,65 @@
+ 
+
+ #sal{
+	 
+	 text-align:left;
+     float:right;
+	width:550px;
+	  
+	 
+ }  
+	 
+
+
+
+#lun  {
+
+     font-style: oblique;
+	font-style: italic;
+	font-weight: bold;
+	padding:9px;
+	text-align:center;
+background-color: #f8c445;
+	 
+	margin:20px 120px 20px 120px;
+
+}
+
+#here{
+	
+	background-color: #f8c445;
+	text-align:left; 
+	margin:20px 120px 20px 120px;
+	
+}
+
+#here1{
+	
+	background-color: #f8c445;
+	   font-style: oblique;
+	font-style: italic;
+	font-weight: bold;
+	padding:9px;
+	margin:20px 120px 20px 120px;
+	text-align:left;
+}
+
+#switch2{
+	text-align:left;
+	background-color: f9b410;
+	margin:20px 80px 20px 80px;
+	padding:9px;
+	
+}
+
+.hey{
+	
+	text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	background-color:#000000;
+	color:#f9b410;
+	border: none;
+}

@@ -1,0 +1,65 @@
+#device1{
+	
+	text-align:center;
+	
+	
+}
+
+
+
+#device{
+	
+	 
+	 
+	font-weight: bold;
+	padding:9px;
+	 text-align:left;
+     
+	 margin:20px 120px 20px 120px;
+	background-color: #f8c445;
+	 font-weight: bold;
+	padding:9px;
+	
+}
+
+a:link,a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+a:hover,a:active{
+	text-decoration: none;
+	color:#797979;
+}
+
+#switch{
+	
+	 
+	font-weight: bold;
+	padding:9px;
+	 text-align:center;
+    background-color: #f8c445;
+	 margin:20px 200px 20px 200px;
+	  float:right;
+	  width:350;
+      
+	 
+	
+}
+
+#switch1{
+	text-align:center;
+}
+
+#switch2{
+	text-align:left;
+	background-color: f9b410;
+	margin:20px 30px 20px 30px;
+	padding:9px;
+	
+}
+
+ul
+{
+list-style-type: none;
+}

@@ -1,0 +1,128 @@
+{%extends "base.html" %}
+{%block title %}Switch{% endblock %}
+
+  
+  
+  
+ {%block head %}<h1>Result</h1>{% endblock %} 
+
+
+{%block content %}
+<link rel="stylesheet" href="  D_style.css" type="text/css"/>
+    
+<div id="switch"> 
+{%if switches%}
+<h2>Switches</h2>
+     <ul>
+      {% for s in switches %}
+       <div id="switch2">  <li>{{s.d_name}}<ul><li>{{s.pin}} </li>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{s.id}}"/>
+  <input class="hey" type="submit" name="remswitch"   value="Delete"/>
+
+</form></li>
+
+</ul></li>
+<a href="/editswman/{{s.id}}">Edit</a>
+     </div> {% endfor %}
+    </ul>
+{% else %}
+   <div id="switch2"> <h3>No Switches Found</h3>
+</div>{% endif %}
+</div>
+
+<div id="switch"> {%if wareabouts%}
+<h2>Whereabouts</h2>
+      <ul>
+      {% for s in wareabouts %}
+       <div id="switch2">   <li>{{s.d_name}}<ul>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{s.id}}"/>
+  <input class="hey" type="submit" name="remwareabout"   value="Delete"/>
+
+</form></li>
+
+</ul></li>
+<a href="/editwareabout/{{s.id}}">Edit</a>
+     </div> {% endfor %}
+    </ul>
+{% else %}
+   <div id="switch2"> <h3>No whereabouts Found</h3></div>
+{% endif %}
+</div>
+
+
+<div id="switch">{%if bells%}
+<h2>Door Bells</h2>
+     <ul>
+      {% for s in bells %}
+      <div id="switch2">   <li>{{s.d_name}}<ul>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{s.id}}"/>
+  <input class="hey" type="submit" name="rembell"   value="Delete"/>
+
+</form></li>
+
+</ul></li>
+<a href="/editbell/{{s.id}}">Edit</a>
+    </div>  {% endfor %}
+    </ul>
+{% else %}
+    <div id="switch2">  <h3>No Bells Found</h3></div>
+{% endif %}
+</div>
+<div id="switch">
+{%if bt_a%}
+<h2>Bluetooth Address</h2>
+     <ul>
+      {% for bt in bt_a %}
+       <div id="switch2">  <li>{{bt.name}}<ul><li>{{bt.mac_addr }} </li>
+<li>{{bt.code }} </li>
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{bt.id}}"/>
+  <input class="hey" type="submit" name="remmac"   value="Delete"/>
+
+</form></li>
+
+</ul></li>
+<a href="/editmac/{{bt.id}}">Edit</a>
+    </div>  {% endfor %}
+    </ul>
+{% else %}
+   <div id="switch2"> <h3>No Macs</h3></div>
+{% endif %}
+</div>
+
+<div id="switch">
+{%if net_a%}
+<h2>Your IP's</h2>
+     <ul>
+      {% for net in net_a %}
+       <div id="switch2">  <li>{{net.name}}<ul><li>{{net.ip }} </li>
+<li>{{net.port }} </li>
+
+
+<li><form action="." method="post">{% csrf_token %}
+   <input type="hidden" name="remove"   value="{{net.id}}"/>
+  <input class="hey" type="submit" name="remip"   value="Delete"/>
+
+</form></li>
+<a href="/editnet/{{net.id}}">Edit</a>
+</ul></li>
+     </div> {% endfor %}
+    </ul>
+{% else %}
+   <div id="switch2"> <h3>no ips</h3></div>
+{% endif %}
+ </div>
+  
+{% endblock %} 
+ 
+  

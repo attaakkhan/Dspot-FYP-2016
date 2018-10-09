@@ -1,0 +1,20 @@
+{%extends "main_page.html" %}
+
+
+{% block content %}
+<link rel="stylesheet" href="/static/R_style.css" type="text/css"/>
+<div id="login">
+{% if form.has_errors %}
+<h2>Your username and password didn't match.
+Please try again.</h2>
+{% endif %}
+<form method="post" action="."   >{% csrf_token %}
+<p><label for="id_username">Username:</label>
+{{ form.username }}</p>
+<p><label for="id_password">Password&nbsp:</label>
+{{ form.password }}</p>
+<input class="hey" type="submit" value="login" />
+<input type="hidden" name="next" value="/" />
+</form>
+</div>
+{% endblock %}
