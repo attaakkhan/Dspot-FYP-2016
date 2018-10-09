@@ -1,0 +1,302 @@
+<ViewSwitcher
+    android:id="@+id/ViewSwitcheremail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:inAnimation="@android:anim/slide_in_left"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Select IP"
+        android:id="@+id/create_tv"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
+    <ListView
+        android:id="@+id/list_create"
+        android:layout_width="fill_parent"
+        android:layout_height="375dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/create_create_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Create"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/create_macs"
+            android:layout_toLeftOf="@+id/create_macs" />
+
+        <Button
+            android:id="@+id/create_ips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="IP"
+            android:layout_alignTop="@+id/create_macs"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/create_macs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Switches"
+            android:layout_above="@+id/create_create_b"
+            android:layout_toLeftOf="@+id/create_addip"
+            android:layout_toRightOf="@+id/create_ips"
+            android:layout_toEndOf="@+id/create_ips" />
+
+        <Button
+            android:id="@+id/create_addip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Bell IPs"
+            android:layout_above="@+id/create_create_b"
+            android:layout_toLeftOf="@+id/create_addmac" />
+
+        <Button
+            android:id="@+id/create_addmac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Bell Macs"
+            android:layout_above="@+id/create_create_b"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/create_back_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Statics"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/create_addmac"
+            android:layout_alignEnd="@+id/create_addmac"
+            android:layout_toEndOf="@+id/create_addip"
+            android:layout_alignLeft="@+id/create_addip"
+            android:layout_alignStart="@+id/create_addip" />
+
+        <Button
+            android:id="@+id/create_udateip_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="From Ip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/create_macs"
+            android:layout_alignEnd="@+id/create_macs" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="327dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".MainActivity"
+            android:layout_weight="0.87">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ADD"
+                android:id="@+id/create_tv1"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="67dp"
+                android:layout_above="@+id/create_ft1"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center" />
+
+
+            <ListView
+                android:id="@+id/list_create22"
+                android:layout_width="fill_parent"
+                android:layout_height="375dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="416dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+                android:id="@+id/create_rl">
+
+
+
+                <Button
+                    android:id="@+id/create_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Add"
+                    android:textColor="#ffffff"
+                    android:clickable="false"
+                    android:background="@drawable/black_button"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="70dp" />
+
+                <EditText
+                    android:id="@+id/create_ft1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:padding="10dp"
+                    android:hint="Email"
+
+                    android:textColorHint="#bbbbbb"
+                    android:drawableRight="@drawable/ic_action_user"
+                    android:layout_above="@+id/create_ft2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/create_ft2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_action_phone"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:hint="Phone#"
+                    android:textColorHint="#bbbbbb"
+                    android:layout_above="@+id/create_ft3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="IP" />
+
+                <EditText
+                    android:id="@+id/create_ft3"
+                    android:drawableRight="@drawable/ic_action_web_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:padding="10dp"
+                    android:hint=""
+                    android:inputType="number"
+                    android:textColorHint="#bbbbbb"
+
+                    android:layout_weight="1.90"
+                    android:layout_above="@+id/create_add"
+                    android:layout_marginBottom="42dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/create_ips1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="@drawable/black_button"
+                android:text="Ips"
+                android:layout_alignTop="@+id/create_macs1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/create_macs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="@drawable/black_button"
+                android:layout_toLeftOf="@+id/create_addip1"
+                android:layout_toRightOf="@+id/create_ips1"
+                android:layout_toEndOf="@+id/create_ips1"
+                android:text="Macs" />
+
+            <Button
+                android:id="@+id/create_addip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="@drawable/black_button"
+                android:text="Add ip"
+                android:layout_toLeftOf="@+id/create_addmac1" />
+
+            <Button
+                android:id="@+id/create_addmac1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="@drawable/black_button"
+                android:text="add mac"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:id="@+id/create_createnetduino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="@drawable/black_button"
+                android:text="Create Netduino"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/create_addmac1"
+                android:layout_alignEnd="@+id/create_addmac1"
+                android:layout_toEndOf="@+id/create_addip1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ViewSwitcher>

@@ -1,0 +1,40 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Switches"
+            android:id="@+id/textView9"
+            android:textSize="40dp"
+            android:textColor="#ffffff"
+            android:textAlignment="center" />
+
+        <ListView
+        android:id="@+id/listviewd"
+
+        android:layout_width="fill_parent"
+        android:layout_height="258dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp"
+            android:layout_weight="1.06" />
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:text="Door Bell"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+

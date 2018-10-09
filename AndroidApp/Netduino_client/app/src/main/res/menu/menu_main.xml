@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="string/menu_search"
+
+        appcompat:actionViewClass="android.support.v7.widget.SearchView"
+        appcompat:showAsAction="ifRoom"
+        appcompat:icon="@drawable/ic_action_mail"/>
+    <item
+        android:id="@+id/menuemail"
+        android:title="Email"
+        android:icon="@drawable/ic_action_mail"
+        appcompat:showAsAction="ifRoom"/>
+
+</menu>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/listcarttitlelabel"
+        android:layout_width="wrap_content"
+        android:textColor="#ffffff"
+
+        android:layout_height="wrap_content"
+        android:text="Title:" />
+
+    <TextView
+        android:textColor="#ffffff"
+
+        android:id="@+id/listswitchname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/listcarttitlelabel" />
+
+    <TextView
+        android:id="@+id/listcartpricelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="#ffffff"
+        android:layout_below="@+id/listcarttitlelabel"
+        android:text="Price($):" />
+
+    <TextView
+        android:id="@+id/lilistswitchpin"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listswitchname"
+        android:layout_toRightOf="@+id/listcartpricelabel" />
+
+    <TextView
+        android:id="@+id/listcartidlabel"
+        android:layout_width="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listcartpricelabel"
+        android:text="ID:" />
+
+    <TextView
+        android:id="@+id/listcartid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lilistswitchpin"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/listcartidlabel" />
+
+    <ImageView
+        android:id="@+id/listcartflag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:padding="1dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Quantity"
+        android:textColor="#ffffff"
+        android:id="@+id/listcarttextView3"
+        android:layout_alignTop="@+id/listcartid"
+        android:layout_toLeftOf="@+id/listswitchoff"
+        android:layout_toStartOf="@+id/listswitchoff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/listcarteditText"
+        android:text="1"
+        android:layout_alignBottom="@+id/lilistswitchpin"
+        android:layout_toLeftOf="@+id/listswitchoff"
+        android:layout_alignLeft="@+id/listcarttextView3"
+        android:layout_alignStart="@+id/listcarttextView3" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEL"
+        android:textColor="#000000"
+
+        android:background="@drawable/red_button"
+        android:id="@+id/listswitchoff"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/listcartflag"
+        android:layout_toStartOf="@+id/listcartflag" />
+
+
+</RelativeLayout>

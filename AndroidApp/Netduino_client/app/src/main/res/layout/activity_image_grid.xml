@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher
+    android:id="@+id/ViewSwitcherqrcode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:inAnimation="@android:anim/slide_in_left"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/qrcodeviewg">
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="390dp"
+            android:columnWidth="100dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:layout_above="@+id/gridbgallery"
+            android:layout_alignParentTop="true" />
+
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:id="@+id/gridbgallery"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:layout_above="@+id/griddone"
+            android:layout_toLeftOf="@+id/gridcamera"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:id="@+id/gridcamera"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:layout_alignTop="@+id/gridbgallery"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:text="QrCode"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:id="@+id/gridqrcode"
+            android:layout_alignTop="@+id/gridcamera"
+            android:layout_toRightOf="@+id/gridcamera"
+            android:layout_toEndOf="@+id/gridcamera" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textColor="#ffffff"
+            android:background="@drawable/black_button"
+            android:id="@+id/griddone"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Photose Addes Yet"
+            android:id="@+id/emptyElement"
+            android:gravity="center|center_vertical|center_horizontal"
+            android:textColor="#ffffff"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+             />
+
+
+    </RelativeLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+    android:id="@+id/qrcodeviewl">
+
+<ListView
+    android:id="@+id/listviewqrcode"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_above="@+id/qrcodepictures" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Done"
+    android:id="@+id/qrcodedone"
+    android:textColor="#ffffff"
+    android:background="@drawable/black_button"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pictures"
+    android:id="@+id/qrcodepictures"
+    android:textColor="#ffffff"
+    android:background="@drawable/black_button"
+    android:layout_above="@+id/qrcodedone"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="QrCode"
+    android:id="@+id/qrcodetake"
+    android:textColor="#ffffff"
+    android:background="@drawable/black_button"
+    android:layout_above="@+id/qrcodedone"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No CODES Added Yet.Click Qrcode To Scan!"
+        android:id="@+id/emptyElement1"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>
+    </ViewSwitcher>

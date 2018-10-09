@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/dsmvlksdmvlksmvkl">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name     "
+        android:id="@+id/textView112"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="IP:PORT   "
+        android:id="@+id/textView122"
+        android:layout_below="@+id/textView112"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ip:port"
+        android:id="@+id/list_ip_ipport"
+        android:autoText="true"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView112"
+        android:layout_alignBottom="@+id/textView122"
+        android:layout_toRightOf="@+id/textView122"
+        android:layout_alignRight="@+id/list_mac_name"
+        android:layout_alignEnd="@+id/list_mac_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/list_ip_name"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/create_b_ip_cb"
+        android:layout_toRightOf="@+id/textView122"
+        android:layout_toEndOf="@+id/textView122" />
+
+
+
+</RelativeLayout>

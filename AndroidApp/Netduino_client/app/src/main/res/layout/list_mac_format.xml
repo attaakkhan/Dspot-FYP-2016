@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/dsmvlksdmvlksmvkl">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name     "
+        android:id="@+id/textView111"
+        android:layout_below="@+id/flag"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Mac"
+        android:id="@+id/textView121"
+        android:layout_below="@+id/textView111"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="mac"
+        android:id="@+id/list_mac_mac"
+        android:autoText="true"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView111"
+        android:layout_toRightOf="@+id/textView111"
+        android:layout_toEndOf="@+id/textView111" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Not set"
+        android:id="@+id/list_mac_name"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/textView111"
+        android:layout_toRightOf="@+id/textView111"
+        android:layout_toEndOf="@+id/textView111" />
+
+</RelativeLayout>
